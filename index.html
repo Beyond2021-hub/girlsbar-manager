@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>店舗売上管理</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>店舗売上管理</h1>
+    <p id="today"></p>
+  </header>
+
+  <main>
+    <section class="summary">
+      <div class="card">
+        <span>本日の売上</span>
+        <strong id="sales">¥0</strong>
+      </div>
+
+      <div class="card">
+        <span>本日の人件費</span>
+        <strong id="salary">¥0</strong>
+      </div>
+
+      <div class="card">
+        <span>本日の経費</span>
+        <strong id="expenses">¥0</strong>
+      </div>
+
+      <div class="card">
+        <span>本日の利益</span>
+        <strong id="profit">¥0</strong>
+      </div>
+    </section>
+
+    <section class="menu">
+      <button onclick="showSlipForm()">伝票を入力</button>
+      <button onclick="showAttendanceForm()">勤怠を入力</button>
+      <button onclick="showCastForm()">キャスト設定</button>
+      <button onclick="showDailySummary()">日次集計</button>
+    </section>
+
+    <section id="content"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
