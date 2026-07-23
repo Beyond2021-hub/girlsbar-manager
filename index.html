@@ -1,84 +1,154 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+    <meta charset="UTF-8">
 
-  <title>ガールズバー売上管理</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css">
+    <title>ガールズバー管理システム</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-  <header class="app-header">
-    <div>
-      <h1>売上管理</h1>
-      <p id="today"></p>
-    </div>
-  </header>
 
-  <main class="app-container">
+    <header>
 
-    <section class="summary-grid">
-      <article class="summary-card">
-        <span>本日の売上</span>
-        <strong id="todaySales">¥0</strong>
-      </article>
+        <h1>🍸 ガールズバー管理システム</h1>
 
-      <article class="summary-card">
-        <span>本日のバック</span>
-        <strong id="todayBack">¥0</strong>
-      </article>
+        <p id="today"></p>
 
-      <article class="summary-card">
-        <span>伝票件数</span>
-        <strong id="todaySlipCount">0件</strong>
-      </article>
+    </header>
 
-      <article class="summary-card">
-        <span>本日の利益目安</span>
-        <strong id="todayProfit">¥0</strong>
-      </article>
-    </section>
+    <main>
 
-    <nav class="main-menu">
-      <button
-        type="button"
-        onclick="showSlipForm()"
-      >
-        伝票入力
-      </button>
+        <!-- ホーム画面 -->
 
-      <button
-        type="button"
-        onclick="showCastSettings()"
-      >
-        キャスト設定
-      </button>
+        <section id="homeScreen">
 
-      <button
-        type="button"
-        onclick="showSlipList()"
-      >
-        伝票一覧
-      </button>
+            <div class="dashboard">
 
-      <button
-        type="button"
-        onclick="showCastSummary()"
-      >
-        キャスト別集計
-      </button>
-    </nav>
+                <div class="card">
 
-    <section id="content"></section>
+                    <span>本日の売上</span>
 
-  </main>
+                    <strong id="todaySales">
 
-  <script src="app.js"></script>
+                        ¥0
+
+                    </strong>
+
+                </div>
+
+                <div class="card">
+
+                    <span>本日の利益</span>
+
+                    <strong id="todayProfit">
+
+                        ¥0
+
+                    </strong>
+
+                </div>
+
+                <div class="card">
+
+                    <span>本日の経費</span>
+
+                    <strong id="todayExpense">
+
+                        ¥0
+
+                    </strong>
+
+                </div>
+
+                <div class="card">
+
+                    <span>伝票件数</span>
+
+                    <strong id="todaySlipCount">
+
+                        0件
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <div class="menu">
+
+                <button
+                    onclick="showSlipForm()">
+
+                    🧾 伝票入力
+
+                </button>
+
+                <button
+                    onclick="showSlipList()">
+
+                    📄 伝票一覧
+
+                </button>
+
+                <button
+                    onclick="showCastSettings()">
+
+                    👩 キャスト設定
+
+                </button>
+
+                <button onclick="showExpenseForm()">
+    💸 経費入力
+</button>
+
+                <button
+                    onclick="showDailySummary()">
+
+                    📅 日別集計
+
+                </button>
+
+                <button
+                    onclick="showMonthlySummary()">
+
+                    📆 月別集計
+
+                </button>
+
+                <button
+                    onclick="showCastSummary()">
+
+                    👑 キャスト別集計
+
+                </button>
+
+                <button onclick="showWorkHoursForm()">
+    ⏰ 勤務時間入力
+</button>
+
+            </div>
+
+        </section>
+
+        <!-- 画面切り替え用 -->
+
+        <section id="content">
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
 </body>
+
 </html>
